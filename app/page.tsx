@@ -1,4 +1,5 @@
 import Contents from "./ui/Contents";
+import Projects from "./ui/Projects";
 
 export default function Home() {
   return (
@@ -8,6 +9,8 @@ export default function Home() {
         <p className="text-sm">WEB DEVELOPER</p>
       </section>
       <Contents />
+      <h1 className="text-6xl font-extrabold  flex justify-center items-center h-full">PROJECTS.</h1>
+      <Projects />
     </article>
   );
 }

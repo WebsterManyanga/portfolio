@@ -1,5 +1,6 @@
 import Contents from "./ui/Contents";
 import Projects from "./ui/Projects";
+import WorkExperience from "./ui/WorkExperience";
 
 export default function Home() {
   return (
@@ -11,6 +12,8 @@ export default function Home() {
       <Contents />
       <h1 className="text-6xl font-extrabold  flex justify-center items-center h-full">PROJECTS.</h1>
       <Projects />
+      <h1 className="text-6xl font-extrabold  flex justify-center items-center h-full">WORK <br/>EXPERIENCE.</h1>
+      <WorkExperience/>
     </article>
   );
 }

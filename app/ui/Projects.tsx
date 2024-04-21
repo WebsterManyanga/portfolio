@@ -1,7 +1,6 @@
 "use client";
 
 import useEmblaCarousel from "embla-carousel-react";
-import "./Projects.css";
 
 const Projects = () => {
   // Carousel of projects

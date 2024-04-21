@@ -1,3 +1,4 @@
+import Certifications from "./ui/Certifications";
 import Contents from "./ui/Contents";
 import Projects from "./ui/Projects";
 import WorkExperience from "./ui/WorkExperience";
@@ -10,10 +11,14 @@ export default function Home() {
         <p className="text-sm">WEB DEVELOPER</p>
       </section>
       <Contents />
-      <h1 className="text-6xl font-extrabold  flex justify-center items-center h-full">PROJECTS.</h1>
+      <h1 className="text-5xl font-extrabold  flex justify-center items-center h-full">PROJECTS.</h1>
       <Projects />
-      <h1 className="text-6xl font-extrabold  flex justify-center items-center h-full">WORK <br/>EXPERIENCE.</h1>
+      <h1 className="text-5xl font-extrabold  flex justify-center items-center h-full">WORK <br/>EXPERIENCE.</h1>
       <WorkExperience/>
+      <h1 className="text-5xl font-extrabold flex justify-center items-center h-full">CERTIFICATIONS</h1>
+      <Certifications />
+
+
     </article>
   );
 }

@@ -11,16 +11,16 @@ export default function Home() {
       <Nav/>
       <Header/>
       <Contents />
-      <h1 className="text-5xl font-extrabold  flex justify-center items-center h-full">
+      <h1 className="text-5xl font-extrabold lg:text-8xl  flex justify-center items-center h-full">
         PROJECTS.
       </h1>
       <Projects />
-      <h1 className="text-5xl font-extrabold  flex justify-center items-center h-full">
+      <h1 className="text-5xl font-extrabold lg:text-8xl  flex justify-center items-center h-full">
         WORK <br />
         EXPERIENCE.
       </h1>
       <WorkExperience />
-      <h1 className="text-5xl font-extrabold flex justify-center items-center h-full">
+      <h1 className="text-5xl font-extrabold lg:text-8xl flex justify-center items-center h-full">
         CERTIFICATIONS
       </h1>
       <Certifications />

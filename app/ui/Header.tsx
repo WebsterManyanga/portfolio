@@ -8,7 +8,7 @@ const Header = () => {
     <p className="text-sm lg:before:content-[''] before:block before:w-16 before:h-0.5 before:bg-white before:absolute relative  before:top-2 before:-left-16 lg:after:content-[''] after:block after:w-16 after:h-0.5 after:bg-white after:absolute  after:top-2 after:-right-16">
       WEB DEVELOPER
     </p>
-    <div className=" hidden lg:block absolute bottom-0 right-20">  
+    <div className=" hidden lg:block absolute bottom-20 right-20">  
       <Image
         src={autograph}
         alt="autograph"

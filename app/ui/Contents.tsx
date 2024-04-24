@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Contents = () => {
   return (
-    <section className="h-full  flex justify-between mt-5 px-4  lg:w-3/4 lg:justify-start gap-96 lg:px-56 mx-auto">
+    <section className="h-full snap-start  flex justify-between mt-5 px-4  lg:w-3/4 lg:justify-start lg:gap-96 lg:px-56 mx-auto">
       <div className="flex justify-center items-center w-16">
         <h1 className="text-6xl -rotate-90 font-extrabold block lg:text-8xl ">CONTENTS.</h1>
       </div>

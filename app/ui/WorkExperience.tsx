@@ -17,13 +17,14 @@ const WorkExperience = () => {
   );
 
   return (
-    <section className="relative h-full">
-      <div className="h-full overflow-scroll  lg:mt-0 lg:pt-10   mt-5 px-10 pt-20 lg:flex  flex-col  lg:pl-96 lg:pb-10 ">
-        {job} {job} {job}{" "}
-      </div>
-      <h1 className="text-5xl lg:absolute  lg:text-center lg:w-full bottom-36 lg:h-fit font-extrabold lg:text-6xl  justify-center items-center h-full lg:block  hidden">
+    <section className="h-full lg:pt-10 lg:mt-20 snap-start">
+      <h1 className="text-5xl pl-52 lg:w-full lg:h-fit font-extrabold lg:text-6xl  justify-center items-center h-full lg:block  hidden">
         WORK EXPERIENCE.
       </h1>
+      <div className="h-full  overflow-scroll  lg:mt-0 lg:pt-10   mt-5 px-10 pt-20 lg:flex  flex-col  lg:pl-96 lg:pb-10 ">
+        {job} {job} {job}{" "}
+      </div>
+
     </section>
   );
 };

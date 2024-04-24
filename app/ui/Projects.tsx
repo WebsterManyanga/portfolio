@@ -30,7 +30,7 @@ const Projects = () => {
   );
 
   return (
-    <section className="embla lg:w-[80vw] lg:mx-auto h-full" ref={emblaRef}>
+    <section className="embla snap-start lg:w-[80vw] lg:mx-auto h-full" ref={emblaRef}>
       <div className="embla__container h-full">
         {project}
         {project}

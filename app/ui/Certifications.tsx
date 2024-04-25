@@ -15,7 +15,7 @@ const Certifications = () => {
   );
 
   return (
-    <section className="embla snap-start relative h-full" ref={emblaRef}>
+    <section className="embla snap-start relative h-full" id="certifications" ref={emblaRef}>
       <div className="embla__container h-full ">
         {certifcation}
         {certifcation}

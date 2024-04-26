@@ -4,7 +4,7 @@ import { MdEmail } from "react-icons/md";
 
 const Contacts = () => {
   return (
-    <div className="hidden  lg:flex mt-20 gap-20 text-4xl">
+    <div className="flex mt-20 gap-20 text-4xl">
       <a href="#" className="flex flex-col items-center">
         <FaLinkedin />
         <h2 className="text-sm text-gray-300">LinkedIn</h2>

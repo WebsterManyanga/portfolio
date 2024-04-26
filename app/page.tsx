@@ -6,7 +6,8 @@ import Header from "./ui/Header";
 import Nav from "./ui/Nav";
 import Contacts from "./ui/Contacts";
 
-export default function Home() {
+
+export default function Home() {  
   return (
     <article className="h-[90vh] overflow-y-scroll scroll-smooth snap-y snap-mandatory lg:snap-none ">
       <Nav/>

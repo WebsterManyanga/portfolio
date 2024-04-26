@@ -1,14 +1,19 @@
 "use client";
-
 import useEmblaCarousel from "embla-carousel-react";
 
 const Projects = () => {
   // Carousel of projects
   const [emblaRef] = useEmblaCarousel();
+  
 
   const project = (
     <div className="embla__slide  h-full flex lg:gap-10 px-4   pt-20 relative " id="projects">
-      <div className="block w-full lg:w-1/4 h-3/4 bg-gray-400"></div>
+      <div className="block w-full lg:w-1/4 h-3/4">
+        <video width="320" height="240" autoPlay loop muted preload="auto"  >
+          <source src="/blackeye.MP4" type="video/mp4"/>
+          Your browser does not support the video tag.
+        </video>
+      </div>
       <div className="absolute bottom-6 right-10 text-6xl font-extrabold lg:left-60 lg:bottom-16 lg:right-auto">
         <h2 className="text-end">01</h2>
         <h2>PROJECT</h2>

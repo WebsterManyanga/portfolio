@@ -9,7 +9,7 @@ const Projects = () => {
   const project = (
     <div className="embla__slide  h-full flex lg:gap-10 px-4   pt-20 relative " id="projects">
       <div className="block w-full lg:w-1/4 h-3/4">
-        <video width="320" height="240" autoPlay loop muted preload="auto"  >
+        <video width="320" height="240"  muted autoPlay preload="auto"  >
           <source src="/blackeye.MP4" type="video/mp4"/>
           Your browser does not support the video tag.
         </video>

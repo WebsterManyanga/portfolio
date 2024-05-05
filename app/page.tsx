@@ -13,7 +13,6 @@ export default function Home() {
     <article className="h-[90vh] overflow-y-scroll scroll-smooth snap-y snap-mandatory lg:snap-none ">
       <Nav/>
       <Header/>
-      <VideoTest/>
 
       <Contents />
       <h1 className="text-5xl snap-start font-extrabold lg:text-8xl  flex justify-center items-center h-full lg:hidden">

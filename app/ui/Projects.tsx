@@ -1,24 +1,29 @@
-'use client';
+"use client";
 import useEmblaCarousel from "embla-carousel-react";
 import { useRef } from "react";
+import VideoTest from "./VideoTest";
 
 const Projects = () => {
   // Carousel of projects
   const [emblaRef] = useEmblaCarousel();
   const vidRef = useRef<HTMLVideoElement>(null);
-  
-  function handleClick() {
-    console.log('clicked');
-    if (vidRef.current) {
-    }
 
+  function handleClick() {
+    console.log("clicked");
+    if (vidRef.current) {
+      vidRef.current.play();
+    }
   }
 
   const project = (
-    <div className="embla__slide  h-full flex lg:gap-10 px-4   pt-20 relative " id="projects">
+    <div
+      className="embla__slide  h-full flex lg:gap-10 px-4   pt-20 relative "
+      id="projects"
+    >
       <div className="block w-fit lg:w-1/4 h-fit border-white border-4 ">
-        <video width="320" height="240"  muted  preload="auto" controls ref={vidRef} src="/blackeye.MP4"/>
+        <VideoTest />
       </div>
+
       {/* <div className="absolute bottom-6 right-10 text-6xl font-extrabold lg:left-60 lg:bottom-16 lg:right-auto">
         <h2 className="text-end">01</h2>
         <h2>PROJECT</h2>
@@ -40,9 +45,11 @@ const Projects = () => {
   );
 
   return (
-    <section className="embla snap-start lg:w-[80vw] lg:mx-auto h-full" ref={emblaRef}>
+    <section
+      className="embla snap-start lg:w-[80vw] lg:mx-auto h-full"
+      ref={emblaRef}
+    >
       <div className="embla__container h-full">
-        <button className="block w-full bg-red-400" onClick={handleClick}>Click Me!</button>
         {project}
         {project}
         {project}

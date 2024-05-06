@@ -3,7 +3,7 @@
 import { Pause, Play } from "@phosphor-icons/react";
 import { useRef, useState } from "react";
 
-const VideoTest = () => {
+const VideoTest = ({src}: {src: string}) => {
   const vidRef = useRef<HTMLVideoElement>(null);
   const [paused, setPaused] = useState(true);
   function handleIt() {
@@ -27,12 +27,12 @@ const VideoTest = () => {
         playsInline
         ref={vidRef}
       >
-        <source src="/blackeye.mp4" type="video/mp4" />
+        <source src={src} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="w-full absolute top-0 h-full  flex justify-center items-center">
         <button
-          className=" text-6xl p-2  rounded-full  border border-[rgb(49,48,53)] shadow-lg shadow-black"
+          className=" text-6xl p-2  rounded-full  border border-[rgb(49,48,53)] shadow-lg shadow-black bg-black bg-opacity-10 "
           onClick={() => handleIt()}
         >
           <Play size={90} weight="thin" className={`${!paused && "hidden"} `} />

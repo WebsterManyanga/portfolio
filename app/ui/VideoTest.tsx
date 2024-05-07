@@ -3,7 +3,7 @@
 import { Pause, Play } from "@phosphor-icons/react";
 import { useRef, useState } from "react";
 
-const VideoTest = ({src}: {src: string}) => {
+const VideoTest = ({project}: propType) => {
   const vidRef = useRef<HTMLVideoElement>(null);
   const [paused, setPaused] = useState(true);
   function handleIt() {
@@ -26,8 +26,10 @@ const VideoTest = ({src}: {src: string}) => {
         controls={false}
         playsInline
         ref={vidRef}
+        preload="metadata"
+        poster={project.thumbnail}
       >
-        <source src={src} type="video/mp4" />
+        <source src={project.src} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="w-full absolute top-0 h-full  flex justify-center items-center">
@@ -44,3 +46,14 @@ const VideoTest = ({src}: {src: string}) => {
 };
 
 export default VideoTest;
+
+
+interface propType {
+  project: {
+    name: string;
+    github: string;
+    website: string;
+    src: string;
+    thumbnail: string;
+  };
+}

@@ -15,7 +15,7 @@ const Projects = () => {
       id="projects"
     >
       <div className="block w-fit lg:w-1/4 h-fit border-white border-4 ">
-        <VideoTest src={project.src} />
+        <VideoTest project={project} />
       </div>
 
       {/* <div className="absolute bottom-6 right-10 text-6xl font-extrabold lg:left-60 lg:bottom-16 lg:right-auto">

@@ -3,7 +3,7 @@
 import { Pause, Play } from "@phosphor-icons/react";
 import { useRef, useState } from "react";
 
-const VideoTest = ({project}: propType) => {
+const VideoTest = ({ project }: propType) => {
   const vidRef = useRef<HTMLVideoElement>(null);
   const [paused, setPaused] = useState(true);
   function handleIt() {
@@ -33,12 +33,20 @@ const VideoTest = ({project}: propType) => {
         Your browser does not support the video tag.
       </video>
       <div className="w-full absolute top-0 h-full  flex justify-center items-center">
-        <button
-          className=" text-6xl p-2  rounded-full  border border-[rgb(49,48,53)] shadow-lg shadow-black bg-black bg-opacity-10 "
-          onClick={() => handleIt()}
-        >
-          <Play size={90} weight="thin" className={`${!paused && "hidden"} `} />
-          <Pause size={90} weight="thin" className={`${paused && "hidden"} `} />
+        <button onClick={() => handleIt()} className=" w-full h-full">
+          <div className={` text-6xl select-none p-2  rounded-full  border border-[rgb(49,48,53)] mx-auto w-28 h-28 shadow-lg shadow-black bg-black bg-opacity-10 ${!paused && "animate-fadeOut opacity-0"}
+          `}>
+            <Play
+              size={90}
+              weight="thin"
+              className={`${!paused && "hidden"} `}
+            />
+            <Pause
+              size={90}
+              weight="thin"
+              className={`${paused && "hidden"}`}
+            />
+          </div>
         </button>
       </div>
     </div>
@@ -46,7 +54,6 @@ const VideoTest = ({project}: propType) => {
 };
 
 export default VideoTest;
-
 
 interface propType {
   project: {

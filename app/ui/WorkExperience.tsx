@@ -10,7 +10,7 @@ const WorkExperience = () => {
       <p className="font-light text-sm">{job.location}</p>
       <p className=" font-medium text-sm">
         {job.responsibilities.map((responsibility) => (
-          <p>{responsibility}</p>
+          <span>{responsibility}</span>
         ))}
       </p>
     </div>

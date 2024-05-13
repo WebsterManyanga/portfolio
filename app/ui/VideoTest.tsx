@@ -18,7 +18,7 @@ const VideoTest = ({ project }: propType) => {
     }
   }
   return (
-    <div className="relative">
+    <div className="relative h-full">
       <video
         width="320"
         height="240"
@@ -28,6 +28,7 @@ const VideoTest = ({ project }: propType) => {
         ref={vidRef}
         preload="metadata"
         poster={project.thumbnail}
+        className="h-full w-full object-cover"
       >
         <source src={project.src} type="video/mp4" />
         Your browser does not support the video tag.

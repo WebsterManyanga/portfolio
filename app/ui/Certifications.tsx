@@ -41,14 +41,14 @@ const Certifications = () => {
 
   return (
     <section
-      className="embla snap-start relative h-full"
+      className="embla snap-start relative"
       id="certifications"
       ref={emblaRef}
     >
-      <h1 className="text-5xl   lg:w-full bottom-36 lg:h-fit font-extrabold lg:text-6xl my-10  ml-80  items-center h-full lg:flex hidden">
+      <h1 className="text-5xl xl:ml-52   lg:w-full bottom-36 lg:h-fit font-extrabold lg:text-6xl my-10  ml-80  items-center h-full lg:flex hidden">
         CERTIFICATIONS
       </h1>
-      <div className="embla__container h-full lg:hidden ">
+      <div className="embla__container h-full lg:hidden">
         {certificationsLibrary}
       </div>
       <div className="hidden lg:grid grid-cols-4 w-2/3 gap-10 mx-auto ">

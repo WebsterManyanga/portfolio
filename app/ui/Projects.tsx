@@ -16,23 +16,23 @@ const Projects = () => {
           <VideoTest project={project} />
         </div>
 
-        <p className="hidden lg:block w-[450px]">
+        <div className="hidden lg:block w-[450px]">
           {project.description}
           <span className="block mt-20">
             Utilized: {project.technologies.join(", ")}
           </span>
-          <div className="hidden lg:block  bottom-6 right-10 font-extrabold lg:left-60 lg:bottom-10 lg:right-auto">
+          <div className="hidden lg:block text-5xl  font-thin bottom-6 right-10  lg:left-60 lg:bottom-10 lg:right-auto">
             <h2>{`0${i + 1}`}</h2>
             <h2>{project.name}</h2>
           </div>
-        </p>
+        </div>
       </div>
     </div>
   ));
 
   return (
     <section
-      className="embla snap-start lg:w-[80vw] lg:mx-auto h-full"
+      className="embla snap-start lg:w-[80vw] lg:mx-auto "
       ref={emblaRef}
     >
       <div className="embla__container h-full">{projects}</div>

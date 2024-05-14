@@ -24,7 +24,7 @@ export default function Home() {
         EXPERIENCE.
       </h1>
       <WorkExperience />
-      <h1 className="text-5xl snap-start font-extrabold lg:text-8xl flex justify-center items-center h-full lg:hidden">
+      <h1 className="text-4xl snap-start font-extrabold lg:text-8xl flex justify-center items-center h-full lg:hidden">
         CERTIFICATIONS
       </h1>
       <Certifications />

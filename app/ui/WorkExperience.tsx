@@ -8,7 +8,7 @@ const WorkExperience = () => {
       <p className="font-light text-sm">{job.date}</p>
       <p className="font-light text-sm">{job.company}</p>
       <p className="font-light text-sm">{job.location}</p>
-      <ul className=" font-medium text-sm w-[600px] my-5">
+      <ul className=" font-medium text-sm w-full lg:w-[600px] my-5">
         {job.responsibilities.map((responsibility) => (
           <li className="mt-1 ">{`* ${responsibility}`}</li>
         ))}
@@ -21,7 +21,7 @@ const WorkExperience = () => {
       <h1 className="text-5xl ml-10 lg:w-full xl:ml-52 lg:h-fit font-extrabold lg:text-6xl  justify-center items-center h-full lg:block  hidden">
         WORK EXPERIENCE.
       </h1>
-      <div className="h-full overflow-clip xl:ml-72  ml-10 lg:mt-4 lg:pt-0   mt-5 px-10 pt-20 lg:flex  flex-col   lg:pb-10 ">
+      <div className="h-full w-full overflow-clip xl:ml-72 ml-0  lg:ml-10 lg:mt-4 lg:pt-0   mt-5 px-10 pt-20 lg:flex  flex-col   lg:pb-10 ">
         {jobs}
       </div>
 

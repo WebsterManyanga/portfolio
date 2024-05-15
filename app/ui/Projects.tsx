@@ -1,18 +1,28 @@
 "use client";
 import useEmblaCarousel from "embla-carousel-react";
-import { useRef } from "react";
+import { useCallback, useRef } from "react";
 import VideoTest from "./VideoTest";
 import { projectsLibrary } from "../projectsLibrary";
+import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
 
 const Projects = () => {
   // Carousel of projects
-  const [emblaRef] = useEmblaCarousel();
+  const [emblaRef, emblaApi] = useEmblaCarousel();
+
+  const scrollPrev = useCallback(() => {
+    console.log("clicked");
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
   const vidRef = useRef<HTMLVideoElement>(null);
 
   const projects = projectsLibrary.map((project, i) => (
     <div className="embla__slide h-full w-screen">
       <div className="flex lg:gap-10 px-4   pt-20 " id="projects">
-        <div className="block w-fit  h-fit border-white border-4 ">
+        <div className="block w-fit lg:ml-10  h-fit border-white border-4 ">
           <VideoTest project={project} />
         </div>
 
@@ -31,11 +41,16 @@ const Projects = () => {
   ));
 
   return (
-    <section
-      className="embla snap-start lg:w-[80vw] lg:mx-auto "
-      ref={emblaRef}
-    >
-      <div className="embla__container h-full">{projects}</div>
+    <section className="embla snap-start lg:w-[80vw] lg:mx-auto relative">
+      <div className="embla__viewport" ref={emblaRef}>
+        <div className="embla__container h-full">{projects}</div>
+      </div>
+      <button className="embla__prev text-4xl left-8 lg:left-0" onClick={scrollPrev}>
+        <FaChevronCircleLeft />{" "}
+      </button>
+      <button className="embla__next text-4xl right-8 xl:right-[50%] lg:right-[5%]" onClick={scrollNext}>
+        <FaChevronCircleRight />
+      </button>
     </section>
   );
 };

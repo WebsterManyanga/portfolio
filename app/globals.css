@@ -37,10 +37,26 @@ body {
 }
 .embla__container {
   display: flex;
+
 }
 .embla__slide {
   flex: 0 0 100%;
   min-width: 0;
+}
+
+.embla__prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+
+.embla__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
 }
 
 *::-webkit-scrollbar {

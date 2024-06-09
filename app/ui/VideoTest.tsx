@@ -18,7 +18,7 @@ const VideoTest = ({ project }: propType) => {
     }
   }
   return (
-    <div className="relative h-[367px] w-full  bg-red-300">
+    <div className="relative h-[367px] w-[220px]">
       <video
 
         autoPlay={false}

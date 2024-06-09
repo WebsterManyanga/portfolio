@@ -45,10 +45,10 @@ const Projects = () => {
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container h-full">{projects}</div>
       </div>
-      <button className="embla__prev text-4xl left-8 lg:left-0" onClick={scrollPrev}>
+      <button className="embla__prev text-4xl px-2 left-0" onClick={scrollPrev}>
         <FaChevronCircleLeft />{" "}
       </button>
-      <button className="embla__next text-4xl right-8 xl:right-[50%] lg:right-[5%]" onClick={scrollNext}>
+      <button className="embla__next text-4xl px-2 right-0 lg:-right-2 xl:right-[50%] " onClick={scrollNext}>
         <FaChevronCircleRight />
       </button>
     </section>

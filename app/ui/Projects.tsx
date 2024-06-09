@@ -21,7 +21,7 @@ const Projects = () => {
 
   const projects = projectsLibrary.map((project, i) => (
     <div className="embla__slide h-full w-screen">
-      <div className="flex lg:gap-10 px-4   pt-20 " id="projects">
+      <div className="flex lg:gap-10 px-4 justify-center  pt-20 " id="projects">
         <div className="block w-fit lg:ml-10  h-fit border-white border-4 ">
           <VideoTest project={project} />
         </div>

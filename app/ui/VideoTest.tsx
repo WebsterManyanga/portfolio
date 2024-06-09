@@ -18,17 +18,16 @@ const VideoTest = ({ project }: propType) => {
     }
   }
   return (
-    <div className="relative h-full">
+    <div className="relative h-[367px] w-full  bg-red-300">
       <video
-        width="320"
-        height="240"
+
         autoPlay={false}
         controls={false}
         playsInline
         ref={vidRef}
         preload="metadata"
         poster={project.thumbnail}
-        className="h-full w-full object-cover"
+        className="h-full w-full mx-auto object-cover"
       >
         <source src={project.src} type="video/mp4" />
         Your browser does not support the video tag.

@@ -1,8 +1,8 @@
 const Contents = () => {
   return (
-    <section className="h-full snap-start  flex justify-center gap-[200px] mt-5 px-4  lg:w-3/4  lg:justify-start lg:gap-10  mx-auto">
+    <section className="h-full snap-start  flex justify-center gap-[100px] sm:gap-[200px] mt-5 px-4  lg:w-3/4  lg:justify-start lg:gap-10  mx-auto">
       <div className="flex justify-center items-center w-16">
-        <h1 className="text-6xl -rotate-90 font-extrabold block lg:text-8xl ">CONTENTS.</h1>
+        <h1 className="text-6xl -rotate-90 font-extrabold block  ">CONTENTS.</h1>
       </div>
       <div className="flex flex-col gap-20 xl:gap-44  justify-center items-center lg:flex-row ">
         <a href='#projects' className="flex flex-col justify-center items-center">

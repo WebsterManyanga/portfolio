@@ -3,57 +3,47 @@
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 import { certifications } from "../certificationsLibrary";
+import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
+import { useCallback, useRef } from "react";
+import { projectsLibrary } from "../projectsLibrary";
+import VideoTest from "./VideoTest";
 
 const Certifications = () => {
-  const [emblaRef] = useEmblaCarousel();
-  const certificationsLibrary = certifications.map((certification, i) => {
-    return (
-      <>
-        <div className="embla__slide  h-full  lg:hidden flex-col items-center px-4  pt-20 ">
-          <div className="block w-full lg:w-2/5 lg:h-2/3 h-1/2">
-            <Image
-              alt={certification.title}
-              src={certification.src}
-              width={500}
-              height={600}
-              className="w-full h-auto"
-            />
-          </div>
-          <div className="text-3xl font-extrabold lg:hidden">
-            <h2 className="text-start">{`0${i + 1}`}</h2>
-            <h2>{certification.title}</h2>
-          </div>
+  // Carousel of projects
+  const [emblaRef, emblaApi] = useEmblaCarousel();
+
+  const scrollPrev = useCallback(() => {
+    console.log("clicked");
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+  const vidRef = useRef<HTMLVideoElement>(null);
+
+  const projects = certifications.map((certification, i) => (
+    <div className="embla__slide h-full w-screen">
+      <div className="flex lg:gap-10 px-4 justify-center  pt-20 " id="projects">
+        <div className="block w-fit lg:ml-10  h-fit border-white border-4 ">
+          <Image src={certification.src} alt={certification.title} width={200} height={200}/>
         </div>
-        <div>
-          <div className="block">
-            <Image
-              alt={certification.title}
-              src={certification.src}
-              width={500}
-              height={600}
-              className="w-full h-auto"
-            />
-          </div>
-        </div>
-      </>
-    );
-  });
+
+      </div>
+    </div>
+  ));
 
   return (
-    <section
-      className="embla snap-start relative"
-      id="certifications"
-      ref={emblaRef}
-    >
-      <h1 className="text-5xl xl:ml-52   lg:w-full bottom-36 lg:h-fit font-extrabold lg:text-6xl my-10  ml-80  items-center h-full lg:flex hidden">
-        CERTIFICATIONS
-      </h1>
-      <div className="embla__container h-full lg:hidden">
-        {certificationsLibrary}
+    <section className="embla snap-start lg:w-[80vw] lg:mx-auto relative">
+      <div className="embla__viewport" ref={emblaRef}>
+        <div className="embla__container h-full">{projects}</div>
       </div>
-      <div className="hidden lg:grid grid-cols-4 w-2/3 gap-10 mx-auto ">
-        {certificationsLibrary}
-      </div>
+      <button className="embla__prev text-4xl px-2 left-0 mt-10  py-28" onClick={scrollPrev}>
+        <FaChevronCircleLeft />{" "}
+      </button>
+      <button className="embla__next text-4xl px-2 right-0 mt-10 py-28" onClick={scrollNext}>
+        <FaChevronCircleRight />
+      </button>
     </section>
   );
 };

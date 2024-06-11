@@ -29,7 +29,7 @@ export default function Home() {
       </h1>
       <Certifications />
       <footer id="footer" className="w-full snap-start h-full flex flex-col relative items-center justify-center ">
-        <h1 className="font-black text-6xl text-center">THAT'S ALL</h1>
+        <h1 className="font-black text-6xl text-center">{"THAT'S ALL"}</h1>
         <p className=" text-gray-300">Thanks for scrolling</p>
         <Contacts />
       </footer>

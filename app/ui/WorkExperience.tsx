@@ -2,8 +2,8 @@ import { careers } from "../careerPath";
 
 const WorkExperience = () => {
 
-  const jobs = careers.map((job) => (
-    <div className="lg:mt-4 before:content-[''] before:block before:w-1 before:h-40 lg:before:h-[80%] before:bg-white relative before:absolute before:-left-6 before:top-10">
+  const jobs = careers.map((job, i) => (
+    <div key={i} className="lg:mt-4 before:content-[''] before:block before:w-1 before:h-40 lg:before:h-[80%] before:bg-white relative before:absolute before:-left-6 before:top-10">
       <h2 className="relative font-extrabold before:content-[''] before:block before:w-2 before:h-2 before:bg-white before:rounded-full before:absolute before:-left-6 before:top-2">{job.title}</h2>
       <p className="font-light text-sm">{job.date}</p>
       <p className="font-light text-sm">{job.company}</p>

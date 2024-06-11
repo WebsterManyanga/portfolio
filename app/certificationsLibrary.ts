@@ -1,6 +1,6 @@
 export const certifications:certificationType[] = [
   {
-    title: "Legacy Algorithms '&amp;' Data Structures",
+    title: "Legacy Algorithms and Data Structures",
     src: "/certifications/javascriptAlgorithms.jpg"
   },
   {

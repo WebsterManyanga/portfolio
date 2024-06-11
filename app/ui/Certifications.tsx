@@ -26,7 +26,7 @@ const Certifications = () => {
     <div className="embla__slide h-full w-screen">
       <div className="flex lg:gap-10 px-4 justify-center  pt-20 " id="projects">
         <div className="block w-fit lg:ml-10  h-fit border-white border-4 ">
-          <Image src={certification.src} alt={certification.title} width={200} height={200}/>
+          <Image src={certification.src} alt={certification.title} width={300} height={220}/>
         </div>
 
       </div>

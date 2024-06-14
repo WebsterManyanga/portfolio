@@ -34,7 +34,7 @@ const Certifications = () => {
   ));
 
   return (
-    <section className="embla snap-start lg:w-[80vw] lg:mx-auto relative">
+    <section id="certifications" className="embla snap-start lg:w-[80vw] lg:mx-auto relative">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container h-full">{certificates}</div>
       </div>
